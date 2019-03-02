@@ -40,7 +40,7 @@ def create_dataset(how_much, variance, step=2, correlation='False'):
     return(np.array(x,dtype = np.float64),np.array(y,dtype=np.float64))
 
 
-x,y = create_dataset(40,80,2,'pos')
+x,y = create_dataset(40,40,2,'pos')
 
 
 m ,c= best_fit_slope_intercept(x,y)

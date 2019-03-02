@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from sklearn import preprocessing,neighbors
+from sklearn import preprocessing,neighbors,svm
 from sklearn.model_selection import train_test_split
 
 df = pd.read_csv('cancer.data.txt')
@@ -15,6 +15,13 @@ clf = neighbors.KNeighborsClassifier()
 clf.fit(X_train,y_train)
 accuracy = clf.score(X_test,y_test)
 print(accuracy)
+
+# print("\n From SVM\n")
+# clf = svm.LinearSVR()
+# clf.fit(X_train,y_train)
+# accuracy = clf.score(X_test,y_test)
+# print(accuracy)
+
 
 predict = np.array([[8,2,7,7,7,6,3,7,7],[4,2,1,1,1,4,3,1,1]])
 predict = predict.reshape(len(predict),-1)
