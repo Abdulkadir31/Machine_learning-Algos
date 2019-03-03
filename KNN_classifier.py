@@ -1,5 +1,5 @@
-import numpy as np
 from matplotlib import style
+import numpy as np
 import matplotlib.pyplot as plt
 import warnings
 from collections import Counter
